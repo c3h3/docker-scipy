@@ -9,8 +9,8 @@ ENV LD_LIBRARY_PATH /opt/OpenBLAS/lib/
 
 RUN pip install cython==0.19
 
-ADD numpy-site.cfg /tmp/numpy/site.cfg
-ADD scipy-site.cfg /tmp/scipy/site.cfg
+ADD numpy-site.cfg /tmp/numpy-site.cfg
+ADD scipy-site.cfg /tmp/scipy-site.cfg
 
 RUN git clone -q --branch=v1.8.2 https://github.com/numpy/numpy.git /tmp/numpy && mv /tmp/numpy-site.cfg /tmp/numpy/site.cfg && cd /tmp/numpy && python setup.py config && python setup.py build && python setup.py install && rm -rf /tmp/numpy
 
