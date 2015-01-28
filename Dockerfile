@@ -1,5 +1,5 @@
 
-FROM c3h3/pyenv:base
+FROM c3h3/pyenv:u1404-py278
 
 MAINTAINER Chia-Chi Chang <c3h3.tw@gmail.com>
 
